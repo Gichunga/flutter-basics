@@ -16,11 +16,17 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal[800],
       ),
       body: Center(
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(20.0, 10.0, 30.0, 40.0),
-            margin: const EdgeInsets.all(10.0),
-            color: Colors.grey[400],
-            child: const Text('hello'),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text('Text widget'),
+              TextButton(onPressed: () {}, child: Text('Button Widget')),
+              Container(
+                color: Colors.teal,
+                padding: EdgeInsets.all(20.0),
+                child: const Text('Container Widget'),
+              ),
+            ],
           ),
       ),
       floatingActionButton: FloatingActionButton(
