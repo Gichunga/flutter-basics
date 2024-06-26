@@ -15,9 +15,19 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[800],
       ),
-      body: Center(
-          child: Row(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.amber,
+            child: const Text('Hello World!'),
+          ),
+          Text('hello world'),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text('Text widget'),
               TextButton(onPressed: () {}, child: Text('Button Widget')),
@@ -28,6 +38,7 @@ class Home extends StatelessWidget {
               ),
             ],
           ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
